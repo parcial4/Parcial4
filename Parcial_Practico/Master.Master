@@ -5,32 +5,26 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Parcial</title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-        <script src="~/assets/js/jquery.min.js"></script>
-		<script src="~/assets/js/skel.min.js"></script>
-		<script src="~/assets/js/skel-layers.min.js"></script>
-		<script src="~/assets/js/init.js"></script>
-        
-    <link rel="stylesheet" href="~/assets/css/skel.css" />
-			<link rel="stylesheet" href="~/assets/css/style.css" />
-			<link rel="stylesheet" href="~/assets/css/style-xlarge.css" />
-
-    
+            
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="~/assets/css/skel.css" />
+			<link rel="stylesheet" href="~/assets/css/style-xlarge.css" />
+            <link rel="stylesheet" href="~/assets/css/style.css" />
 </head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+<body class="">
+    <div >
             <!-- Header -->
 			<header id="header">
 				<h1><a href="index.html">Transit</a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Home</a></li>
+						<li><a href="index.aspx">Home</a></li>
 						<li><a href="generic.html">Generic</a></li>
 						<li><a href="elements.html">Elements</a></li>
 						<li><a href="#" class="button special">Sign Up</a></li>
@@ -38,9 +32,11 @@
 				</nav>
 			</header>
 
+    <form id="form1" runat="server">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            <!-- Footer -->
+    </form>
+        <!-- Footer -->
 			<footer id="footer">
 				<div class="container">
 					<section class="links">
@@ -115,7 +111,11 @@
 				</div>
 			</footer>
         </div>
-    </form>
+
+    <script src="~/assets/js/jquery.min.js"></script>
+		<script src="~/assets/js/skel.min.js"></script>
+		<script src="~/assets/js/skel-layers.min.js"></script>
+		<script src="~/assets/js/init.js"></script>
     
 </body>
 </html>

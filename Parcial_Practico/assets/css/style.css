@@ -928,8 +928,8 @@
 
 /* Header */
 
-	body.landing #header {
-		background-color: rgba(0, 0, 0, 0.01);
+	body .landing #header {
+		background-color: transparent;
 		left: 0;
 		position: absolute;
 		top: 0;
@@ -937,18 +937,15 @@
 
 		body.landing #header nav a {
 			color: rgba(255, 255, 255, 0.5);
-		}
+		}a--in-out;
+						transition: color 0.2s ease-in-out;
+						color: #cdced0;
+						display: inline-block;
+						text-decoration: none;
+					}
 
-	#header {
-		background-color: #383b43;
-		color: #ffffff;
-		cursor: default;
-		font-size: 1.1em;
-		height: 6em;
-		line-height: 6em;
-		width: 100%;
-		z-index: 10000;
-	}
+						#header nav > ul > li a:active, #header navav;
+}
 
 		#header h1 {
 			color: #ffffff;
@@ -1216,4 +1213,5 @@
 
 		.grid-demo .row.flush > div:last-child span {
 			border-radius: 0 4px 4px 0;
+
 		}

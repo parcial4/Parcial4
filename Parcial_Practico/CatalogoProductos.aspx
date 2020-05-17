@@ -2,8 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="odsCatalogoProductos">
+    <div class="container">
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="odsCatalogoProductos" AutoGenerateColumns="False" class="table-wrapper">
+        <Columns>
+            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID"/>
+            <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
+            <asp:BoundField DataField="Nombre_Producto" HeaderText="Nombre Producto" SortExpression="Nombre_Producto" />
+            <asp:BoundField DataField="id_Categoria" HeaderText="Categoria" SortExpression="id_Categoria" />
+            <asp:BoundField DataField="Precio_unitario" HeaderText="Precio Unitario" SortExpression="Precio_unitario" />
+            <asp:BoundField DataField="Detalles" HeaderText="Detalles de Producto" SortExpression="Detalles" />
+            <asp:TemplateField HeaderText="Opciones">
+                <ItemTemplate>
+                    <asp:Button ID="btnAgregar" CommandArgument='<%#Eval("ID")%>' runat="server" Text="Agregar" class="button small"/>
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
 
     </asp:GridView>
-<asp:ObjectDataSource ID="odsCatalogoProductos" runat="server"></asp:ObjectDataSource>
+    </div>
+    
+    <asp:ObjectDataSource ID="odsCatalogoProductos" runat="server" SelectMethod="MostrarTodosProductos" TypeName="Parcial_Practico.ProductosBLL"></asp:ObjectDataSource>
 </asp:Content>
