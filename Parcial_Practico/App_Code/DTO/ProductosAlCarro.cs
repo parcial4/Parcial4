@@ -8,7 +8,7 @@ namespace Parcial_Practico
     public class ProductosAlCarro : IEquatable<ProductosAlCarro>
     {
         private int _idProducto;
-        private ProductosDTO _producto = null;
+        private ProductoC _producto = null;
         public int Cantidad { get; set; }
 
         public int IdProducto
@@ -21,13 +21,13 @@ namespace Parcial_Practico
             }
         }
 
-        public ProductosDTO Producto
+        public ProductoC Producto
         {
             get
             {
                 if (_producto == null)
                 {
-                    _producto = new ProductosDTO();
+                    _producto = new ProductoC(IdProducto);
                     
                 }
                 return _producto;

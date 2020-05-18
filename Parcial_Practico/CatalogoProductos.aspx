@@ -13,7 +13,7 @@
             <asp:BoundField DataField="Detalles" HeaderText="Detalles de Producto" SortExpression="Detalles" />
             <asp:TemplateField HeaderText="Opciones">
                 <ItemTemplate>
-                    <asp:Button ID="btnAgregar" CommandArgument='<%#Eval("ID")%>' runat="server" Text="Agregar" class="button small"/>
+                    <asp:Button ID="btnAgregar" OnClick="btnAgregar_Click" CommandArgument='<%#Eval("ID")%>' runat="server" Text="Agregar" class="button small"/>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

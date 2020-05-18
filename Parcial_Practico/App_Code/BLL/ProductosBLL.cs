@@ -33,6 +33,9 @@ namespace Parcial_Practico
             objProducto.Precio_unitario = filas.PRECIO;
             objProducto.Detalles = filas.DETALLES_DEL_PRODUCTO;
 
+            ProductosAlCarro objPro1 = new ProductosAlCarro(filas.ID);
+            objPro1.IdProducto = filas.ID;
+
             return objProducto;
         }
     }

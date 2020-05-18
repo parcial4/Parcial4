@@ -13,5 +13,17 @@ namespace Parcial_Practico
         protected void Page_Load(object sender, EventArgs e)
         {
         }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            CarroDeCompras carrito = CarroDeCompras.CapturarProducto();
+
+            Button Button2 = (Button)sender;
+
+            int ID = int.Parse(Button2.CommandArgument);
+
+            carrito.Agregar(ID);
+            Response.Redirect("VerCarrito.aspx");
+        }
     }
 }
