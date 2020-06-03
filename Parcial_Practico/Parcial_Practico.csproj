@@ -91,6 +91,7 @@
     <Content Include="assets\js\skel-layers.min.js" />
     <Content Include="assets\js\skel.min.js" />
     <Content Include="index.aspx" />
+    <Content Include="test.aspx" />
     <Content Include="VerCarrito.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -129,6 +130,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Code\DTO\RegistrarDTO.cs" />
     <Compile Include="App_Code\BLL\RegistrarBLL.cs" />
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VerCarrito.aspx.cs">
       <DependentUpon>VerCarrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
